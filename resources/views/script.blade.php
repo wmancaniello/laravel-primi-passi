@@ -58,6 +58,11 @@
                 @foreach ($scripts as $script)
                     <li>
                         {{ $script }}
+                        @if ($loop->last)
+                            .
+                        @else
+                            ;
+                        @endif
                     </li>
                 @endforeach
             </ul>

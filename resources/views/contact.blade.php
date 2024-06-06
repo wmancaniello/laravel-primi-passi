@@ -58,6 +58,11 @@
                 @foreach ($contacts as $contact)
                     <li>
                         {{ $contact }}
+                        @if ($loop->last)
+                            .
+                        @else
+                            ;
+                        @endif
                     </li>
                 @endforeach
             </ul>
